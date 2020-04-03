@@ -149,7 +149,7 @@ public class RNPushNotificationHelper {
                 return;
             }
             
-            if (bundle.getString("alert").isEmpty())) {
+            if (bundle.getString("alert").isEmpty()) {
                 // this happens when Kumulos is sending an In-App Message
                 return;
             }
