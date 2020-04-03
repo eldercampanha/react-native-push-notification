@@ -148,6 +148,11 @@ public class RNPushNotificationHelper {
                 Log.d(LOG_TAG, "Cannot send to notification centre because there is no 'message' field in: " + bundle);
                 return;
             }
+            
+            if (bundle.getString("alert").isEmpty())) {
+                // this happens when Kumulos is sending an In-App Message
+                return;
+            }
 
             String notificationIdString = bundle.getString("id");
             if (notificationIdString == null) {
